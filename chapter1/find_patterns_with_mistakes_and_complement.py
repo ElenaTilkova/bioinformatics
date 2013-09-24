@@ -19,7 +19,6 @@ def combinations(k):
     kmers = None
     if k > 1:
         kmers = combinations(k - 1)
-        k = k - 1
     else:
         return ['A', 'T', 'G', 'C']
     for kmer in kmers:
