@@ -45,15 +45,11 @@ def reverse_pattern(pattern):
     return result[::-1]
 
 combinations = combinate(pattern)
-#print(combinations)
 dna = dna.replace('T', 'U')
-#print(dna)
 pattern_lenght = len(pattern) * 3
-#print(pattern_lenght)
 
 for i in range(len(dna) - pattern_lenght):
     strade = dna[i:i+pattern_lenght]
-    #print(strade + ' ' + reverse_pattern(strade))
     if strade in combinations or reverse_pattern(strade) in combinations:
         results.append(strade.replace('U', 'T'))
 
